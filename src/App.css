@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.headerMenu {
+  background-color:green;
+  margin: 0;
+  padding: 5px;
+  color:#fff;
+}
+
+.footerMenu {
+  background-color:rgb(61, 60, 60);
+  margin: 0;
+  padding: 5px;
+  color:#fff;
+}
+
+.menuItem {
+  display:inline-block;
+  margin-right:20px;
+}
