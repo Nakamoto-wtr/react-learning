@@ -3,7 +3,7 @@ import React from 'react';
 const header = () => {
     return (
     <div className="headerMenu">
-        <p>Logo</p>
+        <p>Logo Here</p>
         <ul>
             <li className="menuItem"> Menu1</li>
             <li className="menuItem"> Menu2</li>
