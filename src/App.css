@@ -56,3 +56,18 @@
   display:inline-block;
   margin-right:20px;
 }
+
+
+.grid {
+  border:2px solid grey;
+  width: 200px;
+  height: 238px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.stocks {
+  border:3px solid magenta;
+  width:500px;
+  margin:0 auto;
+}
