@@ -1,23 +1,29 @@
 import React from 'react';
+import { Stock } from '../Stocks/index.js';
 import { stockData } from "../../data";
 
 
 const grid = () => 
+<div className = "container">
+    <div className="grid">
+    {stockData.map((data, key) => {
+      const { company, stockPrice, timeElapsed } = data;
+        return (
+          <div key = {key}>           
+            <Stock 
+            company={company}
+            stockPrice={stockPrice} 
+            timeElapsed= {timeElapsed}
+            />
+          </div>
+        );
+      })}
 
-        <div className="grid">
-        {stockData.map((data, key) => {
-            return (
-              <div key = {key}>
-                  <p className="gridTitle">{data.company}</p>
-        
-              </div>
-            );
-          })}
+    </div>
+  </div>
 
-        </div>
+export default grid;
 
-
-    export default grid;
 
 
 
