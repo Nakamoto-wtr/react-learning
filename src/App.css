@@ -65,27 +65,19 @@
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  width:90%;
+  flex-wrap: wrap;
 }
+
 
 .stock {
   border:2px solid grey;
-  max-width: 200px !important;
-  height: 130px;
   padding: 20px;
-  margin: 20px;
+  margin: 15px;
 }
 
-@media (max-width: 800px) {
-  .grid {
-    flex-direction: column;
-  }
-
-  .stock {
-    max-width:75%;
-    margin:0 auto;
-    margin-bottom:20px;
-    margin-top:20px;
-  }
+.button__main {
+  padding:15px;
+  margin-top:10px;
 }
+
 

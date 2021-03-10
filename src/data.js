@@ -14,7 +14,7 @@ export const stockData = [
     {
       company: "Shopify Inc",
       ticker: "SHOP",
-      stockPrice: "341.79 USD",
+      stockPrice: "341.79 GBP",
       timeElapsed: "3 sec ago",
     },
     {
@@ -40,5 +40,29 @@ export const stockData = [
         ticker: "FB",
         stockPrice: "415.22 USD",
         timeElapsed: "15 sec ago",
+      },
+      {
+        company: "JP Morgan",
+        ticker: "JP",
+        stockPrice: "415.92 USD",
+        timeElapsed: "55 sec ago",
+      },
+      {
+        company: "Tesla",
+        ticker: "TS",
+        stockPrice: "499.92 USD",
+        timeElapsed: "36 sec ago",
+      },
+      {
+        company: "JD Sports",
+        ticker: "JD",
+        stockPrice: "415.92 GBP",
+        timeElapsed: "33 sec ago",
+      },
+      {
+        company: "Ticketmaster",
+        ticker: "TM",
+        stockPrice: "41.92 USD",
+        timeElapsed: "35 sec ago",
       },
   ];

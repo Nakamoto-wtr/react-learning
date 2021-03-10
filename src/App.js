@@ -4,8 +4,7 @@ import './App.css';
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
 import Grid from './components/Grid/index';
-import Person from './components/Learning/index';
-import { Stock } from "./components/Stocks/index";
+import Person from './components/Learning/Names/index';
 
 
 
@@ -15,32 +14,33 @@ const App = props => {
       { name: 'Waseem', location: 'Newcastle'},
       { name: 'Will', location: 'LA'}
     ],
-    otherState: 'someother value'
+    otherState: 'someother value',
+    showPersons: true
   });
 
 
-const switchNameHandler = () => {
-  setPersons({
-    persons: [
-      {name: 'Max', location: 'Australia'},
-      {name: 'Steph', location: 'Manchester'}
-    ]
-  })
-};
+  const switchNameHandler = () => {
+    setPersons({
+      persons: [
+        {name: 'Max', location: 'Australia'},
+        {name: 'Steph', location: 'Manchester'}
+      ]
+    })
+  };
+
 
   return (
     <div className="App">
     <Header/>
      <Grid/>
-     <Stock/>
       <header className="App-header">
          <img src={logo} className="App-logo" alt="logo" />
          <p>STOCKYO</p>
        </header>
-       <button onClick={switchNameHandler}>Switch names</button>
+       <button className="button__main" onClick={switchNameHandler}>Button 1</button>
        <Person name ={personState.persons[0].name} location={personState.persons[0].location}/>
        <Person name ={personState.persons[1].name} location={personState.persons[1].location}/>
-     <Footer/>
+                       <Footer/>
     </div>
   )
 }
