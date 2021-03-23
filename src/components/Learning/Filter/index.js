@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
-
-const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
+const list = ["James", "John", "Paul", "Ringo", "George"];
 
 <div>
-  {names.filter(name => name.includes('J')).map(filteredName => (
-    <li>
-      {filteredName}
-    </li>
-  ))}
-</div>
+  {list
+    .filter((list) => list.includes("J"))
+    .map((filteredName) => (
+      <li>{filteredName}</li>
+    ))}
+</div>;
 
-export default names;
+export default list;

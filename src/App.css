@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,28 +37,27 @@
   }
 }
 
-
 .headerMenu {
-  background-color:green;
+  background-color: green;
   margin: 0;
   padding: 5px;
-  color:#fff;
+  color: #fff;
 }
 
 .footerMenu {
-  background-color:rgb(61, 60, 60);
+  background-color: rgb(61, 60, 60);
   margin: 0;
   padding: 5px;
-  color:#fff;
+  color: #fff;
 }
 
 .menuItem {
-  display:inline-block;
-  margin-right:20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .container {
-  border:3px solid magenta;
+  border: 3px solid magenta;
 }
 
 .grid {
@@ -68,16 +67,28 @@
   flex-wrap: wrap;
 }
 
-
 .stock {
-  border:2px solid grey;
+  border: 2px solid grey;
   padding: 20px;
   margin: 15px;
 }
 
-.button__main {
-  padding:15px;
-  margin-top:10px;
+.stock img {
+  height: 95px;
+  width: 95px;
 }
 
+.button__main {
+  padding: 15px;
+  margin-top: 10px;
+}
 
+.imageTest {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.imageTest img {
+  width: 110px;
+  margin: 36px;
+}
