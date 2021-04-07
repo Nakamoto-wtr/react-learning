@@ -1,14 +1,28 @@
 import React, { useState } from "react";
-import { stockData } from "../../../data";
 
-const list = () => (
+const stockData = [
+  {
+    image: "../facebook.jpeg",
+  },
+  {
+    image: "../JPmorgan.png",
+  },
+  {
+    image: "../TeslaLogo.png",
+  },
+];
+
+const List = () => {
+  const [images, setImages] = useState( stockData );
+  const handleRemoveFacebook = () => setImages(images.filter(imageObject => imageObject.image !== "../facebook.jpeg"));
+  const handleAddFacebook = () => setImages([...images, { image: "../facebook.jpeg" }]);
+
+  return (
     <div>
-      {stockData.map((data, key) => {
+      <button onClick={handleRemoveFacebook}>Remove facebook</button>
+      <button onClick={handleAddFacebook}>Add facebook</button>
+      {images.map((data, key) => {
         const { image } = data;
-        const arr = [image];
-        arr.image = useState ({
-
-        });
 
         return (
             <div key={key}>
@@ -18,7 +32,7 @@ const list = () => (
         );
       })}
     </div>
- 
-);
+  );
+};
 
-export default list;
+export default List;
