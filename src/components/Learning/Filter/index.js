@@ -1,13 +1,17 @@
 import React from "react";
 
-const list = ["James", "John", "Paul", "Ringo", "George"];
-
-<div>
-  {list
-    .filter((list) => list.includes("J"))
+const filter = () => {
+  const names = ["James", "John", "Paul", "Ringo", "George"];
+  return (
+      <div>
+          <p>TESTING</p> 
+      {names.filter((names) => names.includes("J"))
     .map((filteredName) => (
       <li>{filteredName}</li>
     ))}
-</div>;
+      </div>
+  );
+}
 
-export default list;
+  
+  export default filter;

@@ -1,5 +1,5 @@
 import React from "react";
-// import TwitterLogo from '../../assets/twitter.png';
+
 
 export const Stock = ({ company, stockPrice, timeElapsed, image }) => (
   <div className="stock">
