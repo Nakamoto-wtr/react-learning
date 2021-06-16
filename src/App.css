@@ -56,9 +56,6 @@
   margin-right: 20px;
 }
 
-.container {
-  border: 3px solid magenta;
-}
 
 .grid {
   display: flex;
@@ -94,20 +91,17 @@
 }
 
 .testlearn img {
-  width:150px;
+  width: 150px;
 }
 
-
 .clothes {
-  border:3px solid magenta;
-  width:300px;
+  border: 3px solid magenta;
+  width: 300px;
 }
 
 .clothes img {
-  width:100%;
+  width: 100%;
 }
-
-
 
 .expense-item {
   display: flex;
@@ -166,7 +160,6 @@
   }
 }
 
-
 .expense-date {
   display: flex;
   flex-direction: column;
@@ -192,4 +185,9 @@
 .expense-date__day {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
 }
