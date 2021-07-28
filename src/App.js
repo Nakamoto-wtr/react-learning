@@ -1,13 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header/index';
-import Footer from './components/Footer/index';
-import Grid from './components/Grid/index';
-import Expenses from './components/Learning/Expenses/Expenses';
-import List from './components/Learning/List/index';
-// import Filter from "./components/Learning/Filter/index";
-// import TestImages from "./components/Learning/TestImages/index";
+import React from "react";
+import "./App.css";
+import Header from "./components/Header/index";
+import Footer from "./components/Footer/index";
+import Grid from "./components/GridStocks/index";
+import Expenses from "./components/Learning/Expenses/Expenses";
+import List from "./components/StocksFilter/index";
 
 const App = () => {
   const expenses = [
@@ -33,18 +30,14 @@ const App = () => {
   ];
 
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <Grid />
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>STOCKYO</p>
-      </header>
       <Expenses items={expenses} />
       <List />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -8,6 +8,7 @@ const header = (props) => {
         <li className="menuItem"> HOME</li>
         <li className="menuItem"> LIVE GRAPHS</li>
         <li className="menuItem"> CONTACT</li>
+        <li className="menuItem"> LEARNING</li>
       </ul>
     </div>
   );

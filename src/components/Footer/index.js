@@ -3,7 +3,7 @@ import React from "react";
 const footer = () => {
   return (
     <div className="footerMenu">
-      <small>copyright 2021</small>
+      <small class="copyright">copyright 2021</small>
     </div>
   );
 };
