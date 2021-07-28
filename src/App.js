@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/index";
 import Footer from "./components/Footer/index";
@@ -31,11 +36,23 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
-      <Grid />
-      <Expenses items={expenses} />
-      <List />
-      <Footer />
+      <Router>
+        <Header />
+          <div>
+            <Switch>
+              <Route exact path="/">  
+                <Grid />
+              </Route>
+              <Route path="/expenses">
+              <Expenses items={expenses} />
+              </Route>
+              <Route path="/list">
+                <List />
+              </Route>
+            </Switch>
+          </div>
+        <Footer />
+      </Router>
     </div>
   );
 };
