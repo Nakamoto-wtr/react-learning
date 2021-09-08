@@ -5,6 +5,8 @@ import Footer from "./components/Footer/index";
 import Grid from "./components/GridStocks/index";
 import Expenses from "./components/Learning/Expenses/Expenses";
 import List from "./components/StocksFilter/index";
+import NewExpense from "./components/Learning/NewExpense/NewExpense";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   const expenses = [
@@ -31,11 +33,24 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
-      <Grid />
-      <Expenses items={expenses} />
-      <List />
-      <Footer />
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Grid />
+            </Route>
+            <Route path="/Filter">
+              <List />
+            </Route>
+            <Route path="/Expenses">
+              <NewExpense />
+              <Expenses items={expenses} />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     </div>
   );
 };

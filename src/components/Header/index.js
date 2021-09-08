@@ -1,14 +1,19 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const header = (props) => {
   return (
     <div className="headerMenu">
       <p>STOCKYO</p>
       <ul>
-        <li className="menuItem"> HOME</li>
-        <li className="menuItem"> LIVE GRAPHS</li>
-        <li className="menuItem"> CONTACT</li>
-        <li className="menuItem"> LEARNING</li>
+        <li className="menuItem">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="menuItem">
+          <Link to="/Filter">Filter</Link>
+        </li>
+        <li className="menuItem">
+          <Link to="/Expenses">Expenses</Link>
+        </li>
       </ul>
     </div>
   );
