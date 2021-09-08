@@ -1,6 +1,6 @@
 import { shallow } from "enzyme";
 import React from "react";
-import Grid from "GridStocks/index";
+import Grid from "./index";
 
 describe("Stocks Grid", () => {
   let wrapper;
