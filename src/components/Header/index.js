@@ -1,19 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
-
+import { Link } from "react-router-dom";
 const header = (props) => {
   return (
     <div className="headerMenu">
       <p>STOCKYO</p>
       <ul>
-        <li>
-          <Link to="/">Grid</Link>
+        <li className="menuItem">
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/expenses">Expenses</Link>
+        <li className="menuItem">
+          <Link to="/Filter">Filter</Link>
         </li>
-        <li>
-          <Link to="/list">List</Link>
+        <li className="menuItem">
+          <Link to="/Expenses">Expenses</Link>
         </li>
       </ul>
     </div>

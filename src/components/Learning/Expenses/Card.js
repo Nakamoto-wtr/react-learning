@@ -1,5 +1,4 @@
 import React from "react";
-// import '../../../App.css';
 
 const Card = (props) => {
   const classes = "card " + props.className;
