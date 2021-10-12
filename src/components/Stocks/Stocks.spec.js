@@ -1,17 +1,27 @@
 import { shallow } from "enzyme";
 import React from "react";
-// import Grid from "GridStocks/index";
 import { Stock } from "../Stocks/index.js";
 
 describe("Stocks Grid", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<Stock />);
+    wrapper = shallow(
+      <Stock
+        company="test"
+        stockPrice="100"
+        timeElapsed="10"
+        image="facebook.jpg"
+      />
+    );
   });
 
   test("Renders image", () => {
-    console.log(wrapper);
     const image = wrapper.find("img");
-    expect(image).toEqual('<img src="../facebook.jpeg" alt="facebook"/>');
+    expect(image).toHaveLength(1);
+  });
+
+  test("Renders paragraphs", () => {
+    const paragraphs = wrapper.find("p");
+    expect(paragraphs).toHaveLength(2);
   });
 });

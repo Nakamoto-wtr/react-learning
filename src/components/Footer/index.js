@@ -3,7 +3,10 @@ import React from "react";
 const footer = () => {
   return (
     <div className="footerMenu">
-      <small class="copyright">copyright 2021</small>
+      <small className="copyright">copyright 2021</small>
+      <li>Menu 1</li>
+      <li>Menu 2</li>
+      <li>Menu 3</li>
     </div>
   );
 };

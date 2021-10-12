@@ -43,10 +43,12 @@
     "prettier": "2.2.1"
   },
   "jest": {
-    "moduleNameMapper":{
+    "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>src/test-setup/styleMock.js",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>src/test-setup/fileMock.js"
     },
-    "setupFilesAfterEnv": ["<rootDir>src/test-setup/setupTests.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>src/test-setup/setupTests.js"
+    ]
   }
 }
