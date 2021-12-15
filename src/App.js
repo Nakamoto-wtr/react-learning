@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/index";
-import Footer from "./components/Footer/index";
+// import Footer from "./components/Footer/index";
 import Grid from "./components/GridStocks/index";
 import Expenses from "./components/Learning/Expenses/Expenses";
 import List from "./components/StocksFilter/index";
 import NewExpense from "./components/Learning/NewExpense/NewExpense";
+import TestFunctions from "./components/TestFunctions/index";
 
 const App = () => {
   const expenses = [
@@ -47,8 +48,11 @@ const App = () => {
               <NewExpense />
               <Expenses items={expenses} />
             </Route>
+            <Route path="/TestFunctions">
+              <TestFunctions />
+            </Route>
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </div>

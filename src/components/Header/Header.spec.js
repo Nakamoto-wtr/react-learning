@@ -15,6 +15,6 @@ describe("Header Component", () => {
 
   test("can have children", () => {
     const children = <div className=".menuItem" />;
-    expect(render({ children }).find(".menuItem")).toHaveLength(3);
+    expect(render({ children }).find(".menuItem")).toHaveLength(4);
   });
 });
