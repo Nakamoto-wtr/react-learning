@@ -1,43 +1,39 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+// ** MULTILPLE STATES APPROACH
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
+  // ** SINGLE STATE UPDATE APPROACH
   // const [userInput, setUserInput] = useState ({
   //   enteredTitle: '',
   //   enteredAmount: '',
   //   enteredDate: ''
   // });
 
+  // setUserInput ({
+  //   ...userInput,
+  //   enteredTitle: event.target.value,
+  // });
+
+  // *** EXAMPLE OF STATE UPDATE THAT DEPENDS ON PREVIOUS STATE
+  // setUserInput((prevState) => {
+  //   return  { ...prevState, enteredTitle: event.target.value};
+  // });
+
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-    // setUserInput ({
-    //   ...userInput,
-    //   enteredTitle: event.target.value,
-    // });
-
-    // setUserInput((prevState) => {
-    //   return  { ...prevState, enteredTitle: event.target.value};
-    // });
   };
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-    // setUserInput ({
-    //   ...userInput,
-    //   enteredAmount: event.target.value,
-    // });
   };
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-    // setUserInput ({
-    //   ...userInput,
-    //   enteredDate: event.target.value,
-    // });
   };
 
   const submitHandler = (event) => {
@@ -49,7 +45,7 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
@@ -61,7 +57,9 @@ const ExpenseForm = () => {
         <div className="new-expense__control">
           <label>Title</label>
           <input
+            placeholder="Title"
             type="text"
+            // {...register("Title", { required: true, maxLength: 15 })}
             value={enteredTitle}
             onChange={titleChangeHandler}
           />
@@ -71,6 +69,7 @@ const ExpenseForm = () => {
         <div className="new-expense__control">
           <label>Cost</label>
           <input
+            placeholder="Cost"
             type="number"
             min="0.01"
             step="0.01"

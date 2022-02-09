@@ -32,6 +32,11 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  };
+
   return (
     <div className="App">
       <Router>
@@ -45,7 +50,7 @@ const App = () => {
               <List />
             </Route>
             <Route path="/Expenses">
-              <NewExpense />
+              <NewExpense onAddExpense={addExpenseHandler} />
               <Expenses items={expenses} />
             </Route>
             <Route path="/TestFunctions">
